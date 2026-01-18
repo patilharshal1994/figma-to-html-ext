@@ -60,6 +60,12 @@
         "description": "AI Model to use (e.g., gpt-4, gpt-3.5-turbo, claude-3-opus)",
         "scope": "application"
       },
+      "figma-to-html.figmaToken": {
+        "type": "string",
+        "default": "",
+        "description": "Figma API token (or set FIGMA_TOKEN environment variable)",
+        "scope": "application"
+      },
       "figma-to-html.licenseKey": {
         "type": "string",
         "default": "",
