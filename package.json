@@ -103,7 +103,6 @@
   },
   "homepage": "https://github.com/your-username/figma-to-html-extension#readme",
   "license": "SEE LICENSE IN LICENSE.txt",
-  "icon": "icon.png",
   "galleryBanner": {
     "color": "#1e1e1e",
     "theme": "dark"
