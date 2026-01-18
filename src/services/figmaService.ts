@@ -1,3 +1,4 @@
+import * as vscode from 'vscode';
 import { FigmaLayoutJSON } from './aiService';
 
 /**
@@ -52,13 +53,15 @@ function parseFigmaUrl(figmaUrl: string): ParsedFigmaUrl {
  * @throws Error if token is missing or API call fails
  */
 export async function fetchFigmaLayout(figmaUrl: string): Promise<FigmaLayoutJSON> {
-    // Check for FIGMA_TOKEN
-    const token = process.env.FIGMA_TOKEN;
+    // Check for FIGMA_TOKEN in VS Code settings first, then environment variable
+    const config = vscode.workspace.getConfiguration('figma-to-html');
+    const token = config.get<string>('figmaToken') || process.env.FIGMA_TOKEN;
     
     if (!token) {
         throw new Error(
-            'FIGMA_TOKEN environment variable is required. ' +
-            'Please set it in your environment or VS Code settings.'
+            'Figma API token is required. ' +
+            'Please set figma-to-html.figmaToken in VS Code settings or FIGMA_TOKEN environment variable. ' +
+            'Get your token from: https://www.figma.com/developers/api#access-tokens'
         );
     }
 
