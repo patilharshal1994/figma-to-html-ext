@@ -86,7 +86,7 @@ export async function fetchFigmaLayout(figmaUrl: string): Promise<FigmaLayoutJSO
             });
 
             if (!response.ok) {
-                const error = await response.json().catch(() => ({ err: 'Unknown error' }));
+                const error = await response.json().catch(() => ({ err: 'Unknown error' })) as { err?: string; message?: string };
                 throw new Error(
                     `Figma API error (${response.status}): ${error.err || error.message || response.statusText}`
                 );
@@ -110,7 +110,7 @@ export async function fetchFigmaLayout(figmaUrl: string): Promise<FigmaLayoutJSO
             });
 
             if (!response.ok) {
-                const error = await response.json().catch(() => ({ err: 'Unknown error' }));
+                const error = await response.json().catch(() => ({ err: 'Unknown error' })) as { err?: string; message?: string };
                 throw new Error(
                     `Figma API error (${response.status}): ${error.err || error.message || response.statusText}`
                 );
