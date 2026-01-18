@@ -1,0 +1,40 @@
+PROPRIETARY LICENSE
+
+Copyright (c) 2024 Your Company Name
+
+All rights reserved.
+
+This software and associated documentation files (the "Software") are proprietary 
+and confidential. Unauthorized copying, modification, distribution, or use of 
+this Software, via any medium, is strictly prohibited without the express written 
+permission of the copyright holder.
+
+For commercial licensing or enterprise inquiries, please contact:
+license@example.com
+
+PERMITTED USE:
+This Software is licensed, not sold, to you for use strictly in accordance with 
+the terms of this License Agreement.
+
+RESTRICTIONS:
+You may not:
+- Copy, modify, or create derivative works of the Software
+- Reverse engineer, decompile, or disassemble the Software
+- Remove or alter any proprietary notices or labels
+- Use the Software for any purpose other than as licensed
+- Transfer, sublicense, or distribute the Software without permission
+
+TERMINATION:
+This License is effective until terminated. Your rights under this License will 
+terminate automatically without notice if you fail to comply with any of its terms.
+
+NO WARRANTY:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS 
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+LIMITATION OF LIABILITY:
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+SOFTWARE.

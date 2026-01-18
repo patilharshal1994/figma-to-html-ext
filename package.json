@@ -1,0 +1,105 @@
+{
+  "name": "figma-to-html",
+  "displayName": "Figma to HTML",
+  "description": "Convert Figma designs to production-ready JSX code with Tailwind CSS. AI-powered code generation from Figma URLs.",
+  "version": "1.0.0",
+  "publisher": "your-publisher-id",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization",
+    "Productivity",
+    "Snippets"
+  ],
+  "keywords": [
+    "figma",
+    "html",
+    "jsx",
+    "tailwind",
+    "css",
+    "code-generation",
+    "design-to-code",
+    "react",
+    "typescript"
+  ],
+  "activationEvents": [
+    "onCommand:figma.generateHtml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "figma.generateHtml",
+        "title": "Figma: Generate HTML from URL",
+        "category": "Figma to HTML"
+      }
+    ],
+    "configuration": {
+      "figma-to-html.aiApiKey": {
+        "type": "string",
+        "default": "",
+        "description": "AI API Key for code generation (OpenAI or Anthropic)",
+        "scope": "application"
+      },
+      "figma-to-html.aiProvider": {
+        "type": "string",
+        "enum": ["openai", "anthropic"],
+        "enumDescriptions": [
+          "Use OpenAI API",
+          "Use Anthropic (Claude) API"
+        ],
+        "default": "openai",
+        "description": "AI Provider for code generation",
+        "scope": "application"
+      },
+      "figma-to-html.aiModel": {
+        "type": "string",
+        "default": "gpt-4",
+        "description": "AI Model to use (e.g., gpt-4, gpt-3.5-turbo, claude-3-opus)",
+        "scope": "application"
+      },
+      "figma-to-html.licenseKey": {
+        "type": "string",
+        "default": "",
+        "description": "License key for premium features (if applicable)",
+        "scope": "application"
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/figma-to-html-extension"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/figma-to-html-extension/issues"
+  },
+  "homepage": "https://github.com/your-username/figma-to-html-extension#readme",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  }
+}
